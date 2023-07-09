@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta Charset="UTF-8">
+        <title>JavaScript Projects</title>
+        <link rel="stylesheet" href="design.css">
+    </head>
+    <body>
+        <div class="cursor" ></div>
+        <section class="main">
+            <h3>Cursor Animation</h3>
+        </section>
+        
+        <script type="text/javascript">
+            const curso= document.querySelector(".cursor");
+            var timeout;
+
+            document.addEventListener("mousemove",(e)=>{
+            let x=e.pageX;
+            let y=e.pageY;
+
+            cursor.style.top = y+'px';
+            cursor.style.left = x+'px';
+            cursor.style.display = 'block';
+
+            function mouseStopped()
+            {
+              cursor.style.display = 'none';
+            }
+
+            clearTimeout(timeout)
+            timeout = setTimeout(mouseStopped,1000)
+            });
+        </script>
+    </body>
+</html>  
