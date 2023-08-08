@@ -19,18 +19,22 @@
             let x=e.pageX;
             let y=e.pageY;
 
-            cursor.style.top = y+'px';
-            cursor.style.left = x+'px';
-            cursor.style.display = 'block';
+            curso.style.top = y+'px';
+            curso.style.left = x+'px';
+            curso.style.display = 'block';
 
             function mouseStopped()
             {
-              cursor.style.display = 'none';
+              curso.style.display = 'none';
             }
 
             clearTimeout(timeout)
             timeout = setTimeout(mouseStopped,1000)
             });
+
+            document.addEventListener("mouseout", () => {
+                curso.style.display = 'none';
+            })
         </script>
     </body>
 </html>  
